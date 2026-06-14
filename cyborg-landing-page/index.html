@@ -4,72 +4,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cyborg Future</title>
+<title>CYBER-X | The Future is Human+</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
+    font-family:'Orbitron',sans-serif;
     background:#050816;
     color:white;
     overflow-x:hidden;
 }
 
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(0,255,255,.12), transparent 25%),
+    radial-gradient(circle at 80% 60%, rgba(0,255,255,.12), transparent 25%);
+    z-index:-1;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:fixed;
+    width:100%;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.25);
+    z-index:1000;
+}
+
+.logo{
+    color:#00ffff;
+    font-size:1.4rem;
+    font-weight:900;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00ffff;
+}
+
 .hero{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
-    background:
-    radial-gradient(circle at center,#00ffff33,#050816 60%);
+    padding:100px 20px;
 }
 
-.hero-content h1{
+.hero h1{
     font-size:4rem;
     color:#00ffff;
-    text-shadow:0 0 20px #00ffff;
+    text-shadow:0 0 15px #00ffff;
 }
 
-.hero-content p{
-    margin-top:20px;
-    font-size:1.2rem;
-    color:#d1d1d1;
+.hero p{
+    margin:20px auto;
+    max-width:700px;
+    color:#c8c8c8;
+    line-height:1.7;
 }
 
 .btn{
     display:inline-block;
-    margin-top:30px;
-    padding:15px 35px;
+    margin-top:20px;
+    padding:14px 35px;
     border:2px solid #00ffff;
     color:#00ffff;
     text-decoration:none;
-    border-radius:30px;
-    transition:.4s;
+    border-radius:40px;
     box-shadow:0 0 15px #00ffff;
+    transition:.4s;
 }
 
 .btn:hover{
     background:#00ffff;
-    color:#000;
-    box-shadow:0 0 30px #00ffff;
+    color:black;
+    transform:translateY(-3px);
 }
 
-.section{
-    padding:80px 10%;
+section{
+    padding:100px 10%;
+}
+
+.section-title{
     text-align:center;
-}
-
-.section h2{
-    color:#00ffff;
-    margin-bottom:40px;
     font-size:2.5rem;
+    color:#00ffff;
+    margin-bottom:50px;
 }
 
 .features{
@@ -79,16 +126,16 @@ body{
 }
 
 .card{
-    background:#0d1328;
+    background:#0f172a;
     padding:30px;
-    border-radius:15px;
+    border-radius:20px;
+    border:1px solid rgba(0,255,255,.25);
     transition:.4s;
-    border:1px solid #00ffff44;
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0 0 20px #00ffff66;
+    box-shadow:0 0 20px rgba(0,255,255,.4);
 }
 
 .card h3{
@@ -96,84 +143,148 @@ body{
     margin-bottom:15px;
 }
 
-.footer{
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat-box{
     text-align:center;
     padding:30px;
-    border-top:1px solid #00ffff22;
+    background:#0f172a;
+    border-radius:15px;
 }
 
-.glow{
-    animation:glow 2s infinite alternate;
+.stat-box h2{
+    color:#00ffff;
+    font-size:2rem;
 }
 
-@keyframes glow{
-    from{
-        text-shadow:0 0 10px #00ffff;
-    }
-    to{
-        text-shadow:0 0 30px #00ffff,
-                     0 0 50px #00ffff;
-    }
+.about{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.9;
+    color:#d0d0d0;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid rgba(0,255,255,.2);
+    color:#aaa;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.4rem;
+}
+
+nav ul{
+    gap:12px;
+    font-size:.8rem;
+}
 }
 </style>
 </head>
-
 <body>
 
+<nav>
+    <div class="logo">CYBER-X</div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#stats">Stats</a></li>
+    </ul>
+</nav>
+
 <section class="hero">
-    <div class="hero-content">
-        <h1 class="glow">CYBORG X</h1>
-        <p>The Next Evolution of Human Intelligence & Artificial Power</p>
-        <a href="#features" class="btn">Explore Future</a>
+    <div>
+        <h1>WELCOME TO THE CYBORG ERA</h1>
+
+        <p>
+            Merging Artificial Intelligence with Human Potential.
+            Explore a future where cybernetic enhancements redefine
+            speed, intelligence, vision, and connectivity.
+        </p>
+
+        <a href="#features" class="btn">Explore Technology</a>
     </div>
 </section>
 
-<section class="section">
-    <h2>About Cyborg X</h2>
-    <p>
-        Combining advanced AI, neural integration, and cybernetic
-        enhancements to redefine the limits of human capability.
-    </p>
+<section id="about">
+    <h2 class="section-title">About CYBER-X</h2>
+
+    <div class="about">
+        CYBER-X represents the next generation of human evolution.
+        Through neural integration, AI-assisted decision systems,
+        augmented vision, and adaptive cybernetic technology,
+        humanity can unlock capabilities once imagined only in science fiction.
+    </div>
 </section>
 
-<section class="section" id="features">
-    <h2>Core Features</h2>
+<section id="features">
+    <h2 class="section-title">Core Enhancements</h2>
 
     <div class="features">
 
         <div class="card">
-            <h3>AI Brain Sync</h3>
+            <h3>AI Neural Sync</h3>
             <p>Real-time intelligence enhancement powered by adaptive AI.</p>
         </div>
 
         <div class="card">
-            <h3>Neural Interface</h3>
-            <p>Direct communication between machine and human cognition.</p>
+            <h3>Cyber Vision</h3>
+            <p>Advanced object recognition and augmented reality overlays.</p>
         </div>
 
         <div class="card">
-            <h3>Enhanced Vision</h3>
-            <p>Augmented reality overlays and advanced target recognition.</p>
+            <h3>Smart Combat System</h3>
+            <p>Predictive analytics and instant reaction support.</p>
         </div>
 
         <div class="card">
-            <h3>Cyber Security</h3>
-            <p>Military-grade protection against digital threats.</p>
+            <h3>Quantum Security</h3>
+            <p>Military-grade protection against cyber threats.</p>
         </div>
 
     </div>
 </section>
 
-<section class="section">
-    <h2>Future Is Here</h2>
-    <p>
-        Experience a new era where humans and technology evolve together.
-    </p>
+<section id="stats">
+    <h2 class="section-title">Performance Metrics</h2>
+
+    <div class="stats">
+
+        <div class="stat-box">
+            <h2>99.9%</h2>
+            <p>Neural Accuracy</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>300%</h2>
+            <p>Processing Speed</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>24/7</h2>
+            <p>AI Monitoring</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>1M+</h2>
+            <p>Connected Devices</p>
+        </div>
+
+    </div>
 </section>
 
-<div class="footer">
-    © 2026 CYBORG X | Designed for IIT Bombay CA Program
-</div>
+<footer>
+    © 2026 CYBER-X • Cyborg-Themed Landing Page Project
+</footer>
 
 </body>
 </html>
