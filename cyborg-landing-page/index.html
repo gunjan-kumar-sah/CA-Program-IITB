@@ -1,0 +1,180 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyborg Future</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:
+    radial-gradient(circle at center,#00ffff33,#050816 60%);
+}
+
+.hero-content h1{
+    font-size:4rem;
+    color:#00ffff;
+    text-shadow:0 0 20px #00ffff;
+}
+
+.hero-content p{
+    margin-top:20px;
+    font-size:1.2rem;
+    color:#d1d1d1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    border:2px solid #00ffff;
+    color:#00ffff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.4s;
+    box-shadow:0 0 15px #00ffff;
+}
+
+.btn:hover{
+    background:#00ffff;
+    color:#000;
+    box-shadow:0 0 30px #00ffff;
+}
+
+.section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.section h2{
+    color:#00ffff;
+    margin-bottom:40px;
+    font-size:2.5rem;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#0d1328;
+    padding:30px;
+    border-radius:15px;
+    transition:.4s;
+    border:1px solid #00ffff44;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #00ffff66;
+}
+
+.card h3{
+    color:#00ffff;
+    margin-bottom:15px;
+}
+
+.footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #00ffff22;
+}
+
+.glow{
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #00ffff;
+    }
+    to{
+        text-shadow:0 0 30px #00ffff,
+                     0 0 50px #00ffff;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="glow">CYBORG X</h1>
+        <p>The Next Evolution of Human Intelligence & Artificial Power</p>
+        <a href="#features" class="btn">Explore Future</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>About Cyborg X</h2>
+    <p>
+        Combining advanced AI, neural integration, and cybernetic
+        enhancements to redefine the limits of human capability.
+    </p>
+</section>
+
+<section class="section" id="features">
+    <h2>Core Features</h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>AI Brain Sync</h3>
+            <p>Real-time intelligence enhancement powered by adaptive AI.</p>
+        </div>
+
+        <div class="card">
+            <h3>Neural Interface</h3>
+            <p>Direct communication between machine and human cognition.</p>
+        </div>
+
+        <div class="card">
+            <h3>Enhanced Vision</h3>
+            <p>Augmented reality overlays and advanced target recognition.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cyber Security</h3>
+            <p>Military-grade protection against digital threats.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <h2>Future Is Here</h2>
+    <p>
+        Experience a new era where humans and technology evolve together.
+    </p>
+</section>
+
+<div class="footer">
+    © 2026 CYBORG X | Designed for IIT Bombay CA Program
+</div>
+
+</body>
+</html>
+```
